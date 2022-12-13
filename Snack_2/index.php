@@ -19,36 +19,45 @@ Snack 2
     $nome = $_GET['nome'];
     $email = $_GET['email'];
     $eta = $_GET['eta'];
+    $controllo = [false, false , true];
 
     // controllo nome
     if(strlen($_GET['nome']) > 3)
     {
         echo "Nome: OK ";
+        $controllo[0] = true;
     }
     else
     {
         echo "Nome: KO ";
+        $controllo[0] = false;
     }
 
     //controllo mail
     if(strpos($_GET['email'], "@") != false && strpos($_GET['email'], ".") != false)
     {
         echo "Email: OK ";
+        $controllo[1] = true;
     }
     else
     {
         echo "Email: KO ";
+        $controllo[1] = false;
     }
 
     //controllo età
     if(is_numeric($_GET['eta']))
     {
         echo "Età: OK ";
+        $controllo[2] = true;
     }
     else
     {
         echo "Età: KO ";
+        $controllo[2] = false;
     }
+
+    
 ?>
 
 
@@ -73,6 +82,23 @@ Snack 2
             <!-- <input type="email">
             <input type="number"> -->
         </form>
+
+        <hr>
+
+        <div class="risultato">
+            <?php
+            
+                if($controllo[0] == true && $controllo[1] == true && $controllo[2] == true)
+                {
+                    echo "Accesso Consentito!";
+                }
+                else
+                {
+                    echo "Accesso Negato!";
+                }
+            
+            ?>
+        </div>
     </div>
 </body>
 </html>
@@ -103,7 +129,8 @@ body
     padding: 10px 0;
 }
 
-.contenitore li input
+.contenitore li input,
+.contenitore .risultato
 {
     padding: 10px 15px;
     border-radius: 20px;
@@ -120,6 +147,19 @@ body
 .contenitore li button:hover
 {
     cursor: pointer;
+}
+
+.contenitore hr
+{
+    margin: 20px 0;
+}
+
+.contenitore .risultato
+{
+    background-color: white;
+    display: inline-block;
+    border: 2px solid black;
+
 }
 
 
