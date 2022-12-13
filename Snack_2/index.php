@@ -16,7 +16,39 @@ Snack 2
 <!-- ----- PHP ------------------------------------------------------------------------------------------------- -->
 <?php
 
-   
+    $nome = $_GET['nome'];
+    $email = $_GET['email'];
+    $eta = $_GET['eta'];
+
+    // controllo nome
+    if(strlen($_GET['nome']) > 3)
+    {
+        echo "Nome: OK ";
+    }
+    else
+    {
+        echo "Nome: KO ";
+    }
+
+    //controllo mail
+    if(strpos($_GET['email'], "@") != false && strpos($_GET['email'], ".") != false)
+    {
+        echo "Email: OK ";
+    }
+    else
+    {
+        echo "Email: KO ";
+    }
+
+    //controllo età
+    if(is_numeric($_GET['eta']))
+    {
+        echo "Età: OK ";
+    }
+    else
+    {
+        echo "Età: KO ";
+    }
 ?>
 
 
@@ -33,16 +65,13 @@ Snack 2
     <div class="contenitore">
         <form action="" method="GET">
             <ul>
-                <li><input type="text" placeholder="Nome..."></li>
-                <li><input type="text" placeholder="Email..."></li>
-                <li><input type="text" placeholder="Età..."></li>
+                <li><input type="text" placeholder="Nome..." name="nome"></li>
+                <li><input type="text" placeholder="Email..." name="email"></li>
+                <li><input type="text" placeholder="Età..." name="eta"></li>
                 <li><button>Invia</button></li>
             </ul>
-            
             <!-- <input type="email">
             <input type="number"> -->
-
-            
         </form>
     </div>
 </body>
