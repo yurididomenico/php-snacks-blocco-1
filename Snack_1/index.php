@@ -13,7 +13,7 @@ Olimpia Milano - Cantù | 55-60
 <!-- ----- PHP ------------------------------------------------------------------------------------------------- -->
 <?php
 
-    $array = 
+    $partite = 
     [
         [
             "squadraCasa" => "Licantropi",
@@ -52,15 +52,11 @@ Olimpia Milano - Cantù | 55-60
 <body>
     <div class="contenitore">
         <ul>
-            <?php            
-                for($i=0; $i<count($array); $i++)
+            <?php
+                for($i=0; $i<count($partite); $i++)
                 {
                     echo "<li>";
-                        echo $array[$i]["squadraCasa"]." ";
-                        echo $array[$i]["puntiSquadraCasa"]."<br>";
-
-                        echo $array[$i]["squadraOspite"]." ";
-                        echo $array[$i]["puntiSquadraOspite"]."<br>";
+                        echo $partite[$i]["squadraCasa"] . " - " . $partite[$i]["squadraOspite"] . " " . $partite[$i]["puntiSquadraCasa"] . " | " . $partite[$i]["puntiSquadraOspite"];                        
                     echo "</li>";
                 }
             ?>
