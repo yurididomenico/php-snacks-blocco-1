@@ -7,7 +7,13 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi.
 <!-- ----- PHP ------------------------------------------------------------------------------------------------- -->
 <?php
 
-   
+$paragrafoLungo = 
+"
+ Il ragazzo si zittì un secondo per poi ruggire con ferocia draconica.
+ Farsik prese il pugnale e velocemente incise la schiena del ragazzo.
+ Emirond e Farion lo tenevano fermo contro l’albero. Keron reggeva la corda con tutta la forza che aveva.
+ Cit.
+"
 
 ?>
 
@@ -23,6 +29,9 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi.
 </head>
 <body>
     <div class="contenitore">
+        <p>
+            <?php echo $paragrafoLungo ?>
+        </p>
         
     </div>
 </body>
@@ -49,6 +58,10 @@ body
     padding: 50px;
 }
 
+.contenitore p
+{
+    font-size: 1.4rem;
+}
 
 
 </style>
