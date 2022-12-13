@@ -7,14 +7,13 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi.
 <!-- ----- PHP ------------------------------------------------------------------------------------------------- -->
 <?php
 
-$paragrafoLungo = 
+$paragrafoLungo =
 "
  Il ragazzo si zittì un secondo per poi ruggire con ferocia draconica.
  Farsik prese il pugnale e velocemente incise la schiena del ragazzo.
  Emirond e Farion lo tenevano fermo contro l’albero. Keron reggeva la corda con tutta la forza che aveva.
  Cit.
 "
-
 ?>
 
 
@@ -32,6 +31,17 @@ $paragrafoLungo =
         <p>
             <?php echo $paragrafoLungo ?>
         </p>
+
+        <?php
+        
+        $paragrafiSpezzati = explode(".", $paragrafoLungo);
+
+        for($i=0; $i<count($paragrafiSpezzati); $i++)
+        {
+            echo "<p>".$paragrafiSpezzati[$i]."</p>";
+        }
+        
+        ?>
         
     </div>
 </body>
@@ -60,7 +70,8 @@ body
 
 .contenitore p
 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    padding: 20px 0;
 }
 
 
