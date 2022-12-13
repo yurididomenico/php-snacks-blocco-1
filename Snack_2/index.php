@@ -31,7 +31,19 @@ Snack 2
 </head>
 <body>
     <div class="contenitore">
-        
+        <form action="" method="GET">
+            <ul>
+                <li><input type="text" placeholder="Nome..."></li>
+                <li><input type="text" placeholder="Email..."></li>
+                <li><input type="text" placeholder="Età..."></li>
+                <li><button>Invia</button></li>
+            </ul>
+            
+            <!-- <input type="email">
+            <input type="number"> -->
+
+            
+        </form>
     </div>
 </body>
 </html>
@@ -57,6 +69,29 @@ body
     padding: 50px;
 }
 
+.contenitore li
+{
+    padding: 10px 0;
+}
+
+.contenitore li input
+{
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+.contenitore li button
+{
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+.contenitore li button:hover
+{
+    cursor: pointer;
+}
 
 
 </style>
