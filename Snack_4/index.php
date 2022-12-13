@@ -1,11 +1,33 @@
 <!--
-
+Snack 4
+Creare un array con 15 numeri casuali
+tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
 -->
 <!-- ----- PHP ------------------------------------------------------------------------------------------------- -->
 <?php
 
-    
+    // $arrayNumeriCasuali = ['1', '2'];
+    // echo $arrayNumeriCasuali[1];
 
+
+    $arrayNumeriCasuali = [];
+
+    while(count($arrayNumeriCasuali) < 15)
+    {
+        $numero = rand(1, 20);
+
+        if(!in_array($numero, $arrayNumeriCasuali))
+        {
+            $arrayNumeriCasuali[] = $numero;
+        }
+    }
+
+
+    for($i=0; $i<15; $i++)
+    {
+        echo $arrayNumeriCasuali[$i]."<br>";
+    }
+    
 
 ?>
 
@@ -21,7 +43,11 @@
 </head>
 <body>
     <div class="contenitore">
+        <?php
         
+            // var_dump($arrayNumeriCasuali);
+        
+        ?>
     </div>
 </body>
 </html>
