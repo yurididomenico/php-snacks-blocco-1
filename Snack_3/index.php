@@ -95,11 +95,11 @@ Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z
             // }
 
             // Stampa ogni data con i relativi post
-            foreach ($posts as $date => $datePosts)
+            foreach ($posts as $data => $dataPosts)
             {
-                echo "<h3>".$date."<br></h3>";
+                echo "<h3>".$data."<br></h3>";
             
-                foreach ($datePosts as $post) 
+                foreach ($dataPosts as $post) 
                 {
                     echo "<p>" . $post["title"] . "</p><br>";
                     echo "<p>" . $post["author"] . "</p><br>";

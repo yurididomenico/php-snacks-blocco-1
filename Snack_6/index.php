@@ -53,26 +53,70 @@ $db =
             <?php
             
                 // echo count($db);
-                foreach ($db as $categorie)
+                // foreach ($db as $categorie)
+                // {
+                //     // var_dump($categorie);
+                //     foreach ($categorie as $elementi)
+                //     {
+                //         foreach ($elementi as $figli)
+                //         {
+                //             var_dump($figli);
+                //         }
+                //     }
+
+                //     echo "<br>";                    
+                // }
+
+                foreach ($db as $categoria => $persone)
                 {
-                    // var_dump($categorie);
-                    foreach ($categorie as $elementi)
-                    {
-                        foreach ($elementi as $figli)
+                    echo "<ul>";
+                        
+
+                        if ($categoria == "teachers")
                         {
-                            var_dump($figli);
+                            echo "<h1>$categoria</h1>";
+
+                                foreach ($persone as $persona)
+                                {
+                                    echo "<li>";
+                                        echo "{$persona["name"]} {$persona["lastname"]}";
+                                    echo "</li>";
+                                }
                         }
-                    }
-
-                    echo "<br>";                    
+                    
+                        
+                    echo "</ul>";
                 }
-
-                
             
             ?>
         </div>
 
         <div class="box pm">
+
+            <?php
+            
+                foreach ($db as $categoria => $persone)
+                {
+                    echo "<ul>";
+                        
+
+                        if ($categoria == "pm")
+                        {
+                            echo "<h1>$categoria</h1>";
+
+                                foreach ($persone as $persona)
+                                {
+                                    echo "<li>";
+                                        echo "{$persona["name"]} {$persona["lastname"]}";
+                                    echo "</li>";
+                                }
+                        }
+                    
+                        
+                    echo "</ul>";
+                }
+            
+            ?>
 
         </div>
         
