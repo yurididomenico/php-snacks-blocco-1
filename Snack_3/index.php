@@ -61,6 +61,11 @@ Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z
     ];
 
 
+       
+    
+    
+
+
 ?>
 
 
@@ -81,14 +86,28 @@ Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z
             
             // echo key($posts);
 
-            foreach(array_keys($posts) as $key){
-                echo "<div>";
+            // foreach(array_keys($posts) as $key){
+            //     echo "<div>";
 
-                echo $key;
+            //     echo $key;
                 
-                echo "</div>";
-            }
+            //     echo "</div>";
+            // }
 
+            // Stampa ogni data con i relativi post
+            foreach ($posts as $date => $datePosts)
+            {
+                echo "<h3>".$date."<br></h3>";
+            
+                foreach ($datePosts as $post) 
+                {
+                    echo "<p>" . $post["title"] . "</p><br>";
+                    echo "<p>" . $post["author"] . "</p><br>";
+                    echo "<p>" . $post["text"] . "</p><br><br>";
+                }
+
+                echo "<br>";
+            }
             
 
             

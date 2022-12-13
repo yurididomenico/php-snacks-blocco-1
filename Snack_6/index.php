@@ -1,12 +1,15 @@
 <!-- 
 Snack 6
-Utilizzare questo array: https://pastebin.com/CkX3680A. Stampiamo il nostro array mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde.
+Utilizzare questo array: https://pastebin.com/CkX3680A.
+Stampiamo il nostro array mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde.
  -->
 <!-- ----- PHP ------------------------------------------------------------------------------------------------- -->
 <?php
 
-$db = [
-    'teachers' => [
+$db = 
+[
+    'teachers' => 
+    [
         [
             'name' => 'Michele',
             'lastname' => 'Papagni'
@@ -16,7 +19,10 @@ $db = [
             'lastname' => 'Forghieri'
         ]
     ],
-    'pm' => [
+
+
+    'pm' => 
+    [
         [
             'name' => 'Roberto',
             'lastname' => 'Marazzini'
@@ -43,7 +49,32 @@ $db = [
 </head>
 <body>
     <div class="contenitore">
-        
+        <div class="box insegnanti">
+            <?php
+            
+                // echo count($db);
+                foreach ($db as $categorie)
+                {
+                    // var_dump($categorie);
+                    foreach ($categorie as $elementi)
+                    {
+                        foreach ($elementi as $figli)
+                        {
+                            var_dump($figli);
+                        }
+                    }
+
+                    echo "<br>";                    
+                }
+
+                
+            
+            ?>
+        </div>
+
+        <div class="box pm">
+
+        </div>
         
     </div>
 </body>
@@ -68,6 +99,28 @@ body
 {
     background-color: #c6c6c6;
     padding: 50px;
+}
+
+.contenitore
+{
+    display: flex;
+}
+
+.box
+{
+    border: 2px solid black;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.insegnanti
+{
+    background-color: grey;
+}
+
+.pm
+{
+    background-color: green;
 }
 
 </style>
