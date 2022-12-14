@@ -9,9 +9,13 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi.
 
 $paragrafoLungo =
 "
- Il ragazzo si zittì un secondo per poi ruggire con ferocia draconica.
+ Egli si zittì un secondo per poi ruggire con ferocia draconica.
  Farsik prese il pugnale e velocemente incise la schiena del ragazzo.
  Emirond e Farion lo tenevano fermo contro l’albero. Keron reggeva la corda con tutta la forza che aveva.
+ Farsik riuscì a trovare il punto dell'attaccatura delle ali e incise più a fondo. E lì un ruggito di dolore e furia risuonò per tutta Elgah. 
+ Alyris non credeva a ciò che stava vedendo. Era scioccata e continuò a guardare sorpresa la scena.
+ Alla fine le due possenti ali nere uscirono. Tutte fradice. Daryan si accasciò, ancora legato al possente albero.
+ Keron lo slegò e cadde a terra silenzioso tornando allo stato originale. 
  Cit.
 "
 ?>
@@ -38,7 +42,7 @@ $paragrafoLungo =
 
         for($i=0; $i<count($paragrafiSpezzati); $i++)
         {
-            echo "<p>".$paragrafiSpezzati[$i]."</p>";
+            echo "<p>".$paragrafiSpezzati[$i].".</p>";
         }
         
         ?>

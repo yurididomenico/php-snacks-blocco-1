@@ -15,40 +15,22 @@ Stampare:
 
     $classe =
     [
-        0 =>
         [
             'nome' => 'Totino',
             'cognome' => 'Burrasca',
-            'voti' =>
-            [
-                'italiano' => 4,
-                'storia' => 6,
-                'informatica' => 3
-            ]
+            'voti' => [4, 6, 3]
         ],
 
-        1 =>
         [
             'nome' => 'Alfonsino',
             'cognome' => 'Mastronni',
-            'voti' =>
-            [
-                'italiano' => 3,
-                'storia' => 4,
-                'informatica' => 6
-            ]
+            'voti' => [6, 6, 3]
         ],
 
-        2 =>
         [
             'nome' => 'Gigino',
             'cognome' => 'Scaletta',
-            'voti' =>
-            [
-                'italiano' => 4,
-                'storia' => 6,
-                'informatica' => 3
-            ]
+            'voti' => [4, 6, 8]
         ],
 
     ]
@@ -68,14 +50,22 @@ Stampare:
 <body>
     <div class="contenitore">
             <?php
-                foreach ($classe as $alunni => $alunno)
-                {
-                    echo "<ul>";
-                        echo "<li>Nome: "."{$alunno["nome"]}"."</li>";
-                        echo "<li>Cognome: "."{$alunno["cognome"]}"."</li>";
+                // foreach ($classe as $alunni => $alunno)
+                // {
+                //     echo "<ul>";
+                //         echo "<li>Nome: "."{$alunno["nome"]}"."</li>";
+                //         echo "<li>Cognome: "."{$alunno["cognome"]}"."</li>";
+                //     echo "</ul>";
+                // }
 
-                    echo "</ul>";
+                for($i=0; $i<count($classe); $i++)
+                {
+                    $mediaVoti = array_sum($classe[$i]['voti']) / count($classe[$i]['voti']);
+
+                    echo $classe[$i]['nome']." - ".$classe[$i]['cognome']."<br>Media: ".$mediaVoti."<br><br>";
                 }
+
+
             ?>
     </div>
 </body>
